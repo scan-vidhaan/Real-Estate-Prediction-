@@ -1,13 +1,15 @@
-# Regression Model Comparison Notebook
+# Bangalore Real Estate Price Prediction
 
-This notebook contains an in-depth analysis and comparison of three regression models — Decision Tree, Random Forest, and XGBoost — applied to a supervised regression task.
+This notebook contains an in-depth analysis and comparison of three regression models — Decision Tree, Random Forest, and XGBoost — applied to predict property prices in Bangalore based on various features.
 
 ## Project Overview
 
 The goal of this project is to:
-- Train and evaluate baseline and fine-tuned versions of popular regression models.
-- Compare their performance using multiple error metrics.
-- Identify the best-performing model based on real-world prediction accuracy.
+
+- Predict property prices in Bangalore using historical real estate data.
+- Train and evaluate both baseline and fine-tuned versions of popular regression models.
+- Compare their performance using industry-standard error metrics.
+- Identify the most reliable model for accurate property price estimation.
 
 ## Models Trained
 
@@ -25,11 +27,11 @@ The goal of this project is to:
 | Metric | Meaning |
 |--------|---------|
 | MAE (Mean Absolute Error) | Average error in predictions |
-| MSE (Mean Squared Error)  | Squared error, penalizing large mistakes |
-| RMSE (Root Mean Squared Error) | Square root of MSE — interpretable in original units |
-| R² (R-Squared Score)      | How much variance is explained by the model |
+| MSE (Mean Squared Error)  | Squared error, penalizing larger mistakes |
+| RMSE (Root Mean Squared Error) | Square root of MSE, in same units as target (price) |
+| R² (R-Squared Score)      | Proportion of variance in price explained by the model |
 
-All metrics were computed on the test set.
+All metrics were computed on the test set using real Bangalore housing data.
 
 ## Results Summary
 
@@ -44,8 +46,8 @@ All metrics were computed on the test set.
 
 ## Key Insights
 
-- Random Forest (Base) gave the best overall performance, with the lowest MAE and highest R².
-- Tuning helped Decision Trees but slightly hurt Random Forest and XGBoost.
-- XGBoost struggled, possibly due to suboptimal tuning or overfitting.
+- **Random Forest (Base)** achieved the best overall performance, with the lowest MAE and highest R².
+- **Tuning improved** Decision Tree performance slightly but **did not benefit XGBoost**, which may have been prone to overfitting or improperly tuned.
+- **XGBoost underperformed**, suggesting it may not be ideal for this specific dataset or requires more careful hyperparameter tuning.
 
 
