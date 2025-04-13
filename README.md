@@ -31,7 +31,9 @@ This system enables informed decisions by analyzing factors like area, location,
 ---
 
 ## Partner(s)/Contributor(s)
-- Vidhaan Appaji  
+- Vidhaan Appaji
+- Antereep Chakraborty
+- Ankur Bhagat
 
 
 ---
